@@ -45,7 +45,7 @@
 		    </nav>
 		</header>
 		<main>
-			<h1>Компания «Техномарт»</h1>
+			<h1 class="visually-hidden">Компания «Техномарт»</h1>
 			<section>
 				<h2>Избранные категории</h2>
 				<ul>
@@ -293,5 +293,29 @@
 				<span>htmlacademy.ru</span>
 			</p>
 		</footer>
+		<!-- Модальное окно обратной связи -->
+		<div>
+			<form action="https://echo.htmlacademy.ru">
+				<p>
+					<label for="writeus-name">Ваше имя:</label>
+					<input id="writeus-name" type="text" name="name" placeholder="Имя Фамилия">
+				</p>
+				<p>
+					<label for="writeus-email">Ваш e-mail:</label>
+					<input id="writeus-email" type="email" name="email" placeholder="email@example.com">
+				</p>
+				<p>
+					<label for="writeus-text">Текст письма:</label>
+					<textarea id="writeus-text" name="text" placeholder="В свободной форме"></textarea>
+				</p>
+				<button type="submit">Отправить</button>
+			</form>
+			<button type="button">Закрыть</button>
+		</div>
+		<!-- Модальное окно карты -->
+		<div>
+			<img src="img/map-big.png" width="943" height="449" alt="Увеличенная карта местонахождения офиса компании «Техномарт»">
+			<button type="button">Закрыть</button>
+		</div>
 	</body>
 </html>
