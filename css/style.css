@@ -7,21 +7,28 @@
 	--basic-greydark: #161D29;
 	--basic-greymedium: #32425C;
 	--basic-greymediumlow: #A9A9A9;
-	--basic-greydarklow: #293449;
 	--basic-greydarkhigh: #1D2739;
 	--basic-green: #63A63E;
 	--basic-red: #EE3643;
 	--basic-bg: #F1F5F7;
+	--basic-bg-filter: #F7F3EC;
 	--basic-white: #ffffff;
 	--basic-whitehalf: rgba(255, 255, 255, 0.5);
+	--basic-whitethird: rgba(255, 255, 255, 0.3);
 	--basic-black: #000000;
+	--basic-blackthird: rgba(0, 0, 0, 0.3);
+	--basic-blackquarter: rgba(0, 0, 0, 0.25);
 
 	--header-bg: #F3F7F9;
+	--header-section-bg: #F9F5F0;
 
 	--shadow-greendark: #367315;
 	--shadow-greendarker: #518534;
 	--shadow-reddark: rgba(0, 0, 0, 0.24);
 	--shadow-product-card: rgba(0, 0, 0, 0.15);
+	--shadow-brand: rgba(0, 0, 0, 0.15);
+
+	--button-hover-red: #CA2C37;
 
 	--footer-address: #F3F7F9;
 	--footer-nav-top: #F1F5F7;
@@ -34,6 +41,7 @@
 	--special-lilac: #DC91D8;
 	--special-greenlight: #8ED78F;
 	--special-yellowlight: #FFD180;
+	--special-yellow2: #FFC047;
 	
 	--success: #5FBB2D;
 	--warning: #FFBF47;
@@ -74,6 +82,26 @@ img {
 	height: 1px !important; 
 	width: 1px !important; 
 	overflow: hidden;
+}
+
+/* Buttons */
+
+.button-red {
+	background-color: var(--basic-red);
+	color: var(--basic-white);
+	text-transform: uppercase;
+	text-align: center;
+	font-family: Cuprum;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.button-red:hover {
+	background-color: var(--button-hover-red);
+}
+
+.button-red:active {
+	background-color: var(--error);
 }
 
 /* Header */
@@ -224,7 +252,7 @@ img {
 
 .main-menu {
 	background-color: var(--basic-greymedium);
-	box-shadow: inset 0px -5px 0px var(--basic-greydarklow);
+	box-shadow: inset 0px -5px 0px var(--basic-grey);
 	list-style: none;
 }
 
@@ -242,13 +270,13 @@ img {
 }
 
 .main-menu li:hover {
-	background-color: var(--basic-greydarklow);
-	box-shadow: inset 0px -5px 0px var(--basic-greydarklow);
+	background-color: var(--basic-grey);
+	box-shadow: inset 0px -5px 0px var(--basic-grey);
 }
 
 .main-menu li:active {
 	background-color: var(--basic-greydarkhigh);
-	box-shadow: inset 0px -5px 0px var(--basic-greydarklow);
+	box-shadow: inset 0px -5px 0px var(--basic-grey);
 }
 
 /* Main Page About Section */
@@ -306,6 +334,190 @@ img {
 	padding: 10px 60px;
 }
 
+/*  Featured Section */
+
+.main-featured {
+	font-family: Cuprum;
+	color: var(--basic-white);
+}
+
+.featured-new {
+	background-image: url('../img/ribbon-new.png');
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.featured-categories, .featured-benefits {
+	list-style: none;
+}
+
+.featured-categories h3, .featured-benefits h3 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.featured-categories a, .featured-benefits a {
+	color: var(--basic-white);
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: var(--basic-whitethird);
+	padding: 10px 24px;
+}
+
+.featured-categories .materials{
+	background-color: var(--special-yellow);
+}
+
+.featured-categories .instrument{
+	background-color: var(--special-blue);
+}
+
+.featured-categories .tech{
+	background-color: var(--special-lilac);
+}
+
+.slide-title {
+	background: var(--basic-blackquarter);
+}
+
+.slider-single h3 {
+	font-size: 36px;
+	line-height: 36px;
+	text-transform: uppercase;
+}
+
+.slider-single span {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.slider-single a {
+	padding: 10px 46px;
+}
+
+.featured-benefits .discount {
+	background: var(--special-greenlight);
+}
+
+.featured-benefits .delivery {
+	background: var(--special-yellow2);
+}
+
+/* Popular Products Section and Popular Brands Section */
+
+.main-products h2,
+.main-brands h2 {
+	font-family: Cuprum;
+	color: var(--basic-greymedium);
+	font-size: 30px;
+	line-height: 30px;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+.main-products header,
+.main-brands header {
+	background-color: var(--header-section-bg);
+}
+
+.products-all, .brands-all {
+	background-color: var(--basic-red);
+	color: var(--basic-white);
+	font-family: Cuprum;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.products-all {
+	padding: 10px 24px;
+}
+
+.brands-all {
+	padding: 10px 38px;
+}
+
+.brands-list {
+	list-style: none;
+}
+
+.brands-list li {
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--greylight);
+	margin: 20px;
+}
+
+.brands-list li:hover {
+	box-shadow: 0px 4px 20px var(--shadow-brand);
+}
+
+.brands-list li:active {
+	box-shadow: 0px 4px 20px var(--shadow-brand);
+	opacity: 0.5;
+}
+
+/* Services Section */
+
+.main-services {
+	background-color: var(--basic-bg);
+}
+
+.main-services h2 {
+	font-family: Cuprum;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.services-tabs {
+	list-style: none;
+}
+
+.services-tabs li {
+	width: 240px;
+	height: 61px;
+}
+
+.services-tabs button {
+	width: 100%;
+	height: 100%;
+	border: none;
+	font-family: Cuprum;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 30px;
+	text-align: left;
+	color: var(--basic-white);
+	background-color: var(--basic-greymedium);
+	box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+	cursor: pointer;
+}
+
+.services-tabs .active {
+	background-color: var(--basic-white);
+	color: var(--basic-greymedium);
+	box-shadow: 0px 1px 0px var(--basic-white), inset 0px 1px 0px var(--basic-white);
+}
+
+.services-tabs button:not(.active):hover {
+	background-color: var(--basic-grey);
+}
+
+.services-article h3 {
+ 	color: var(--basic-greymedium);
+ 	font-family: Cuprum;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.services-article a {
+ 	padding: 10px 40px;
+}
+
 /* Breadcrumbs */
 
 .breadcrumbs {
@@ -332,6 +544,48 @@ img {
 	color: var(--basic-greymedium:);
 }
 
+.products-filter header {
+	width: 220px;
+	height: 38px;
+	text-transform: uppercase;
+	background-color: var(--basic-bg-filter);
+}
+
+.products-filter input {
+	border: none;
+	background-color: var(--basic-bg-filter);
+	font-size: 17px;
+	line-height: 18px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.range-wrapper {
+	width: 220px;
+	height: 80px;
+	background-color: var(--basic-bg-filter);
+	margin-bottom: 10px;
+}
+
+.products-filter input[type=range] {
+	width: 180px;
+	height: 2px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 39px;
+}
+
+.products-filter input[type=text] {
+	width: 95px;
+	height: 38px;
+}
+
+.products-filter span {
+	font-size: 17px;
+	line-height: 18px;
+	margin: auto 5px;
+}
+
 .products-filter h3 {
 	font-family: Cuprum;
 	font-size: 17px;
@@ -348,6 +602,12 @@ img {
 	text-transform: uppercase;
 }
 
+.filter-brands li,
+.filter-battery li {
+	margin-bottom: 20px;
+
+}
+
 .products-filter button {
 	font-size: 13px;
 	line-height: 18px;
@@ -358,6 +618,47 @@ img {
 	border-color: var(--basic-greylight);
 	box-sizing: border-box;
 	padding: 10px 78px;
+	cursor: pointer;
+}
+
+.products-sort {
+	background-color: var(--basic-bg-filter);
+}
+
+.products-sort p {
+	text-transform: uppercase;
+}
+
+.sort-options {
+	list-style: none;
+}
+
+.sort-options a {
+	mix-blend-mode: normal;
+	color: var(--basic-blackthird);
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: var(--basic-red);
+	text-transform: uppercase;
+}
+
+.sort-options .active {
+	color: var(--basic-red);
+	border: none;
+}
+
+.sort-options a:not(.active):hover {
+	color: var(--basic-black);
+}
+
+.sort-options a:not(.active):active {
+	color: var(--basic-red);
+}
+
+.products-sort button {
+	background: transparent;
+	border: none;
+	color: var(--basic-red);
 	cursor: pointer;
 }
 
@@ -464,6 +765,58 @@ img {
 	opacity: 0.5;
 }
 
+/* Pagination */
+
+.pagination {
+	list-style: none;
+}
+
+.pagination li {
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--basic-greylightlow);
+	box-sizing: border-box;
+	border-radius: 2px;
+	text-transform: uppercase;
+	margin: 10px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.pagination li:not(.active):hover {
+	border-color: var(--basic-greylight);
+}
+
+.pagination li:not(.active):active {
+	border-color: var(--basic-red);
+
+}
+
+.pagination a {
+	color: var(--basic-black);
+}
+
+.pagination .active {
+	background-color: var(--basic-red);
+}
+
+.pagination .active a {
+	color: var(--basic-white);
+}
+
+/* Few Words Section */
+
+.few-words {
+	background-color: var(--basic-bg);
+}
+
+.few-words h2 {
+	font-family: Cuprum;
+	font-size: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
 /* Footer */
 
 footer {
@@ -520,7 +873,7 @@ footer {
 .footer-bottom {
 	font-size: 16px;
 	line-height: 18px;
-	background-color: var(--basic-greydarklow);
+	background-color: var(--basic-grey);
 	color: var(--basic-white);
 }
 
