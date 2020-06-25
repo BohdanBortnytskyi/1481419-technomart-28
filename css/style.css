@@ -132,7 +132,7 @@ img {
 
 .header-top-wrapper {
 	width: 100%;
-	height: 42px;
+	height: auto;
 	margin-bottom: 40px;
 	background-color: var(--basic-grey);
 }
@@ -150,7 +150,7 @@ img {
 
 .header-top-menu {
 	width: 820px;
-	height: 42px;
+	min-height: 42px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -241,7 +241,7 @@ img {
 
 .header-phone {
 	width: 270px;
-	height: 45px;
+	min-height: 45px;
 	color: var(--basic-white);
 	border-width: 3px;
 	border-style: solid;
@@ -267,12 +267,19 @@ img {
 	color: var(--basic-grey);
 	text-align: center;
 	margin: 0;
+	max-width: 270px;
 }
 
 .header-profile {
 	width: 300px;
 	margin-bottom: 20px;
-	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header-profile-loggedin {
+	width: 300px;
+	margin-bottom: 20px;
 }
 
 .header-login {
@@ -313,11 +320,6 @@ img {
 	padding: 12px 57px 12px 56px;
 }
 
-.header-logout {
-	position: absolute;
-	right: 5px;
-}
-
 .header-account-links {
 	font-family: Cuprum;
 	font-size: 16px;
@@ -340,9 +342,10 @@ img {
 	background-color: var(--basic-greymedium);
 	box-shadow: inset 0px -5px 0px var(--basic-grey);
 	list-style: none;
-	height: 60px;
+	min-height: 60px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	margin-bottom: 60px;
 }
 
@@ -994,7 +997,6 @@ img {
 /* Footer */
 
 footer {
-	margin-top: 70px;
 	background-color: var(--basic-greymedium);
 	font-family: Cuprum;
 	font-size: 18px;
@@ -1002,7 +1004,6 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 }
 
 .footer-top {
@@ -1031,20 +1032,30 @@ footer {
 }
 
 .footer-nav {
-	width: 550px;
+	width: 620px;
+	min-height: 193px;
 }
 
 .footer-nav-top {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-top: 37px;
 }
 
 .footer-nav-bottom {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0;
 	margin-top: 34px;
+	width: 100%;
 }
 
 .footer-nav-top,
@@ -1054,6 +1065,7 @@ footer {
 
 .footer-nav-top a {
 	color: var(--footer-nav-top);
+	margin-left: 60px;
 }
 
 .footer-nav-top a:hover {
@@ -1062,6 +1074,7 @@ footer {
 
 .footer-nav-bottom a {
 	color: var(--footer-nav-bottom);
+	margin-left: 60px;
 }
 
 .footer-nav-bottom a:hover {
@@ -1107,6 +1120,8 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+	max-width: 270px;
 }
 
 .footer-social li {
