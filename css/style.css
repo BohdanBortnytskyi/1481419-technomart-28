@@ -57,7 +57,7 @@ html {
 }
 
 body {
-	min-width: 1220px;
+	min-width: 960px;
 	margin: 0;
 	padding: 0;
 	font-family: PT Sans, sans-serif;
@@ -65,7 +65,7 @@ body {
 	line-height: 24px;
 	color: var(--basic-black);
 	background-color: var(--basic-white);
-	min-width: 100%;
+	min-height: 100%;
 	display: grid;
 	grid-template-rows: min-content 1fr min-content;
 	align-content: start;
@@ -86,8 +86,8 @@ img {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
 	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
+	padding: 0 !important;
+	border: 0 !important;
 	height: 1px !important; 
 	width: 1px !important; 
 	overflow: hidden;
@@ -97,6 +97,7 @@ img {
 .container {
 	width: 940px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 /* Buttons */
@@ -106,7 +107,7 @@ img {
 	color: var(--basic-white);
 	text-transform: uppercase;
 	text-align: center;
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 }
@@ -138,7 +139,7 @@ img {
 }
 
 .header-top {
-	font-family: Cuprum, Arial, sans-serif;
+	font-family: Cuprum, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	background-color: transparent;
@@ -227,7 +228,7 @@ img {
 }
 
 .header-about {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
@@ -249,7 +250,7 @@ img {
 }
 
 .header-phone a {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
@@ -259,7 +260,7 @@ img {
 }
 
 .header-contacts p {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 14px;
@@ -283,7 +284,7 @@ img {
 }
 
 .header-login {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);
@@ -293,7 +294,7 @@ img {
 }
 
 .header-register {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);
@@ -312,7 +313,7 @@ img {
 }
 
 .header-account {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 21px;
 	line-height: 21px;
 	color: var(--basic-black);
@@ -321,7 +322,7 @@ img {
 }
 
 .header-account-links {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 16px;
 	line-height: 18px;
 	color: var(--basic-greymedium);
@@ -352,7 +353,7 @@ img {
 .main-menu a {
 	width: 100%;
 	height: 100%;
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -393,7 +394,7 @@ img {
 /* Main Page About Section */
 
 .main-about h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -408,7 +409,7 @@ img {
 }
 
 .delivery-partners li {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 18px;
@@ -417,7 +418,7 @@ img {
 }
 
 .main-about .button-more {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -429,7 +430,7 @@ img {
 /* Main Page Contacts Section */
 
 .main-contacts h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -441,7 +442,7 @@ img {
 }
 
 .main-contacts .button-contact {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -453,8 +454,13 @@ img {
 /*  Featured Section */
 
 .main-featured {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	color: var(--basic-white);
+	display: flex;
+	flex-direction: column;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	max-width: 100%;
 }
 
 .featured-new {
@@ -463,13 +469,24 @@ img {
 	background-position: right top;
 }
 
-.featured-categories, .featured-benefits {
+.featured-categories {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.featured-categories li {
+	width: 300px;
+	height: 123px;
+	margin-bottom: 20px;
 }
 
 .featured-categories h3, .featured-benefits h3 {
 	font-size: 24px;
 	line-height: 30px;
+	margin-left: 23px;
 }
 
 .featured-categories a, .featured-benefits a {
@@ -478,7 +495,8 @@ img {
 	line-height: 18px;
 	text-transform: uppercase;
 	background-color: var(--basic-whitethird);
-	padding: 10px 24px;
+	margin-left: 23px;
+	padding: 10px 20px;
 }
 
 .featured-categories .materials{
@@ -493,23 +511,65 @@ img {
 	background-color: var(--special-lilac);
 }
 
+.featured-row {
+	display: flex;
+    justify-content: space-between;
+}
+
+.featured-slider {
+	width: 620px;
+	height: 266px;
+}
+
+.slider-single {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
 .slide-title {
 	background: var(--basic-blackquarter);
+	width: 100%;
+	height: 104px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .slider-single h3 {
 	font-size: 36px;
 	line-height: 36px;
-	text-transform: uppercase;
+	margin: 0;
+	margin-top: 23px;
+	margin-bottom: 5px;
+	padding-left: 24px;
 }
 
 .slider-single span {
 	font-size: 18px;
 	line-height: 24px;
+	padding-left: 24px;
 }
 
 .slider-single a {
 	padding: 10px 46px;
+	position: absolute;
+	bottom: 24px;
+    left: 27px;
+}
+
+.featured-benefits {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.featured-benefits li {
+	width: 300px;
+	height: 123px;
 }
 
 .featured-benefits .discount {
@@ -524,23 +584,33 @@ img {
 
 .main-products h2,
 .main-brands h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	color: var(--basic-greymedium);
 	font-size: 30px;
 	line-height: 30px;
 	align-items: center;
 	text-transform: uppercase;
+	margin-left: 28px;
 }
 
 .main-products header,
 .main-brands header {
 	background-color: var(--header-section-bg);
+	height: 89px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.main-brands {
+	margin-top: 60px;
 }
 
 .products-all, .brands-all {
 	background-color: var(--basic-red);
 	color: var(--basic-white);
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-transform: uppercase;
@@ -549,21 +619,33 @@ img {
 
 .products-all {
 	padding: 10px 24px;
+	margin-right: 14px;
 }
 
 .brands-all {
 	padding: 10px 38px;
+	margin-right: 14px;
 }
 
 .brands-list {
 	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .brands-list li {
 	border-width: 1px;
 	border-style: solid;
 	border-color: var(--greylight);
-	margin: 20px;
+	width: 220px;
+	height: 145px;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .brands-list li:hover {
@@ -577,19 +659,29 @@ img {
 
 /* Services Section */
 
-.main-services {
+.main-servises-wrapper {
 	background-color: var(--basic-bg);
+	width: 100%;
+	height: 522px;
 }
 
 .main-services h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	padding-top: 64px;
+}
+
+.main-services-content {
+	margin-top: 70px;
+	display: flex;
 }
 
 .services-tabs {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .services-tabs li {
@@ -601,14 +693,14 @@ img {
 	width: 100%;
 	height: 100%;
 	border: none;
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
 	text-align: left;
 	color: var(--basic-white);
 	background-color: var(--basic-greymedium);
-	box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+	box-shadow: 0px 1px 0px var(--basic-grey), inset 0px 1px 0px #405069;
 	cursor: pointer;
 }
 
@@ -622,12 +714,23 @@ img {
 	background-color: var(--basic-grey);
 }
 
+.services-article {
+	margin-left: 80px;
+}
+
 .services-article h3 {
  	color: var(--basic-greymedium);
- 	font-family: Cuprum;
+ 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+}
+
+.services-article p {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .services-article a {
@@ -638,7 +741,8 @@ img {
 
 .breadcrumbs {
 	list-style: none;
-	width: 100%;
+	margin: 0;
+	padding: 0;
 	margin-top: 21px;
 	margin-bottom: 20px;
 	display: flex;
@@ -660,12 +764,12 @@ img {
 .products {
 	display: grid;
 	grid-template-columns: 220px 220px 220px 220px;
-	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-rows: auto auto auto auto auto auto auto;
 	gap: 20px;
 }
 
 .products h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -676,6 +780,7 @@ img {
 	padding-bottom: 30px;
 	grid-column-start: 1;
 	grid-column-end: -1;
+	margin: 0;
 }
 
 .products-filter {
@@ -686,10 +791,12 @@ img {
 }
 
 .products-filter header {
-	width: 220px;
-	height: 38px;
+	min-height: 38px;
 	text-transform: uppercase;
 	background-color: var(--basic-bg-filter);
+	padding-top: 10px;
+	padding-left: 18px;
+	padding-bottom: 10px;
 }
 
 .products-filter input {
@@ -702,10 +809,9 @@ img {
 }
 
 .range-wrapper {
-	width: 220px;
-	height: 80px;
+	min-height: 80px;
 	background-color: var(--basic-bg-filter);
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .products-filter input[type=range] {
@@ -714,6 +820,11 @@ img {
 	margin-left: 20px;
 	margin-right: 20px;
 	margin-top: 39px;
+}
+
+.price-inputs {
+	display: flex;
+	justify-content: space-between;
 }
 
 .products-filter input[type=text] {
@@ -728,11 +839,20 @@ img {
 }
 
 .products-filter h3 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 17px;
 	line-height: 30px;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--basic-black);
+	margin-bottom: 0;
+}
+
+.filter-separator {
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.1);
+	margin-top: 25px;
 }
 
 .filter-brands,
@@ -741,12 +861,13 @@ img {
 	font-size: 15px;
 	line-height: 19px;
 	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
 }
 
 .filter-brands li,
 .filter-battery li {
-	margin-bottom: 20px;
-
+	margin-top: 20px;
 }
 
 .products-filter button {
@@ -760,15 +881,22 @@ img {
 	box-sizing: border-box;
 	padding: 10px 78px;
 	cursor: pointer;
+	margin-top: 35px;
 }
 
 .products-sort {
+	min-height: 38px;
 	background-color: var(--basic-bg-filter);
 	grid-row-start: 2;
 	grid-row-end: 3;
 	grid-column-start: 2;
 	grid-column-end: -1;
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 10px;
+	padding-left: 19px;
+	padding-bottom: 10px;
 }
 
 .products-sort p {
@@ -777,7 +905,9 @@ img {
 
 .sort-options {
 	list-style: none;
+	flex-grow: 1;
 	display: flex;
+	justify-content: flex-end;
 }
 
 .sort-options a {
@@ -787,6 +917,7 @@ img {
 	border-bottom-style: dotted;
 	border-bottom-color: var(--basic-red);
 	text-transform: uppercase;
+	margin-left: 65px;
 }
 
 .sort-options .active {
@@ -802,6 +933,11 @@ img {
 	color: var(--basic-red);
 }
 
+.sort-buttons {
+	margin-left: 46px;
+	margin-right: 17px;
+}
+
 .products-sort button {
 	background: transparent;
 	border: none;
@@ -810,7 +946,6 @@ img {
 }
 
 .products-list {
-	width: 700px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -825,7 +960,7 @@ img {
 
 .product-card {
 	width: 220px;
-	height: 318px;
+	min-height: 318px;
 	border-width: 1px;
 	border-style: solid;
 	border-color: var(--greylight);
@@ -835,6 +970,13 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.product-image {
+	width: 100%;
+	height: 128px;
+	display: flex;
+	justify-content: center;
 }
 
 .product-card a {
@@ -872,8 +1014,7 @@ img {
 .product-options {
 	display: none;
 	width: 135px;
-	height: 38px;
-	margin: 0 auto;
+	height: 128px;
 }
 
 .product-card:hover {
@@ -891,12 +1032,13 @@ img {
 .button-bookmarks {
 	width: 135px;
 	height: 38px;
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
+	margin-top: 10px;
 }
 
 .button-buy {
@@ -942,7 +1084,13 @@ img {
 
 .pagination {
 	list-style: none;
+	grid-row-start: 6;
+	grid-row-end: 7;
+	grid-column-start: 2;
+	grid-column-end: -1;
 	display: flex;
+	margin: 0;
+	padding: 0;
 }
 
 .pagination li {
@@ -952,9 +1100,14 @@ img {
 	box-sizing: border-box;
 	border-radius: 2px;
 	text-transform: uppercase;
-	margin: 10px;
-	padding: 10px;
 	cursor: pointer;
+	min-width: 38px;
+	height: 38px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	padding: 10px;
 }
 
 .pagination li:not(.active):hover {
@@ -987,7 +1140,7 @@ img {
 }
 
 .few-words h2 {
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -998,7 +1151,7 @@ img {
 
 footer {
 	background-color: var(--basic-greymedium);
-	font-family: Cuprum;
+	font-family: Cuprum, sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 	display: flex;
