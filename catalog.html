@@ -20,10 +20,11 @@
 				  		</div>
 				  		<div class="header-top-menu">
 				  			<div class="header-search">
-						      	<span>Поиск:</span>
+						      	<button type="button">Поиск:</button>
+						      	<input type="text" name="search-text">
 						    </div>
 					      	<ul class="header-top-nav">
-					      		<li>
+					      		<li class=bookmarks>
 					      			<a href="#">Закладки: 0</a>
 					      		</li>
 					      		<li class="cart cart-notempty">
@@ -51,10 +52,9 @@
 			  	</div>
 				<div class="header-profile-loggedin">
 					<a class="header-account" href="#">Равшан Джамшутович</a>
-					<a class="header-logout" href="#">Выйти</a>
 					<ul class="header-account-links">
-						<li>Мои заказы</li>
-						<li>Личный кабинет</li>
+						<li><a href="#">Мои заказы</a></li>
+						<li><a href="#">Личный кабинет</a></li>
 					</ul>
 				</div>
 		    </div>
@@ -75,7 +75,7 @@
 		<main>
 			<div class="container">
 				<ul class="breadcrumbs">
-					<li><a href="index.html">Главная</a></li>
+					<li><a class="link-home" href="index.html"></a></li>
 					<li><a href="catalog.html">Каталог</a></li>
 					<li><a href="#">Инструмент</a></li>
 					<li>Перфораторы</li>
@@ -86,31 +86,39 @@
 						<header>
 							<p>Фильтр:</p>
 						</header>
-						<h3>Цена:</h3>
-						<div class="range-wrapper">
-							<input type="range" min="0" max="30000">
-						</div>
-						<div class="price-inputs">
-							<input type="text" value="0">
-							<span>—</span>
-							<input type="text" value="30000">
-						</div>
-						<div class="filter-separator"></div>
-						<h3>Производители:</h3>
-						<ul class="filter-brands">
-							<li>Bosch</li>
-							<li>Интерскол</li>
-							<li>Makita</li>
-							<li>Dewalt</li>
-							<li>Hitachi</li>
-						</ul>
-						<div class="filter-separator"></div>
-						<h3>Питание:</h3>
-						<ul class="filter-battery">
-							<li>Аккумуляторные</li>
-							<li>Сетевые</li>
-						</ul>
-						<button type="button">Показать</button>
+						<form action="https://echo.htmlacademy.ru" method="get">
+							<fieldset class="filter-range">
+								<legend>Цена:</legend>
+								<div class="range-wrapper">
+									<input type="range" min="0" max="30000">
+								</div>
+								<div class="price-inputs">
+									<input type="text" value="0">
+									<span>—</span>
+									<input type="text" value="30000">
+								</div>
+							</fieldset>
+							<div class="filter-separator"></div>
+							<fieldset class="filter-brands">
+								<legend>Производители:</legend>
+								<ul>
+									<li>Bosch</li>
+									<li>Интерскол</li>
+									<li>Makita</li>
+									<li>Dewalt</li>
+									<li>Hitachi</li>
+								</ul>
+							</fieldset>
+							<div class="filter-separator"></div>
+							<fieldset class="filter-battery">
+								<legend>Питание:</legend>
+								<ul>
+									<li>Аккумуляторные</li>
+									<li>Сетевые</li>
+								</ul>
+							</fieldset>
+							<button type="submit">Показать</button>
+						</form>
 					</aside>
 					<header class="products-sort">
 						<p>Сортировка:</p>
@@ -359,11 +367,15 @@
 			</div>
 		</footer>
 		<!-- Модальное с сообщением -->
-		<div class="modal">
-			<p>Товар добавлен в корзину!</p>
-			<a href="#">Оформить заказ</a>
-			<button type="button">Продолжить покупки</button>
-			<button type="button">Закрыть</button>
+		<div class="modal-container" style="display: none;">
+			<div class="modal modal-cart">
+				<p>Товар добавлен в корзину!</p>
+				<div class="cart-buttons">
+					<a class="button-order button-red" href="#">Оформить заказ</a>
+					<button type="button" class="button-continue button-white">Продолжить покупки</button>
+				</div>
+				<button type="button" class="button-close"></button>
+			</div>
 		</div>
 	</body>
 </html>

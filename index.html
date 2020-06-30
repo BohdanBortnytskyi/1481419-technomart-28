@@ -20,10 +20,11 @@
 				  		</div>
 				  		<div class="header-top-menu">
 				  			<div class="header-search">
-						      	<span>Поиск:</span>
+						      	<button type="button">Поиск:</button>
+						      	<input type="text" name="search-text">
 						    </div>
 					      	<ul class="header-top-nav">
-					      		<li>
+					      		<li class="bookmarks">
 					      			<a href="#">Закладки: 0</a>
 					      		</li>
 					      		<li class="cart">
@@ -282,7 +283,7 @@
 						<li>Автотрейдинг</li>
 						<li>ЖелДорЭкспедиция</li>
 					</ul>
-					<a class="button-more" href="#">Подробнее о компании</a>
+					<a class="button-more button-red" href="#">Подробнее о компании</a>
 				</section>
 				<section class="main-contacts">
 					<h2>Контакты</h2>
@@ -295,7 +296,7 @@
 							<img src="img/map.png" width="300" height="158" alt="Карта расположения офиса">
 						</a>
 					</div>
-					<a class="button-contact" href="#">Заблудились? Напишите нам!</a>
+					<a class="button-contact button-red" href="#">Заблудились? Напишите нам!</a>
 				</section>
 			</div>
 		</main>
@@ -383,12 +384,14 @@
 				</p>
 				<button type="submit">Отправить</button>
 			</form>
-			<button type="button">Закрыть</button>
+			<button type="button" class="button-close">Закрыть</button>
 		</div>
 		<!-- Модальное окно карты -->
-		<div  class="modal modal-map">
-			<img src="img/map-big.png" width="943" height="449" alt="Увеличенная карта местонахождения офиса компании «Техномарт»">
-			<button type="button">Закрыть</button>
+		<div class="modal-container" style="display: none;">
+			<div class="modal modal-map">
+				<img src="img/map-big.png" width="943" height="449" alt="Увеличенная карта местонахождения офиса компании «Техномарт»">
+				<button type="button" class="button-close"></button>
+			</div>
 		</div>
 	</body>
 </html>
