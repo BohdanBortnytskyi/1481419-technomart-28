@@ -90,12 +90,16 @@
 							<fieldset class="filter-range">
 								<legend>Цена:</legend>
 								<div class="range-wrapper">
-									<input type="range" min="0" max="30000">
+									<div class="scale">
+										<div class="bar" style="width: 60%; margin-left: 20%;"></div>
+									</div>
+									<div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
+									<div class="toggle toggle-max" tabindex="0" style="left: 70%;"></div>
 								</div>
 								<div class="price-inputs">
-									<input type="text" value="0">
+									<input type="number" name="min-price" value="0">
 									<span>—</span>
-									<input type="text" value="30000">
+									<input type="number" name="max-price" value="30000">
 								</div>
 							</fieldset>
 							<div class="filter-separator"></div>
