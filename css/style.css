@@ -861,7 +861,7 @@ img {
 	border: none;
 	width: 21px;
 	height: 39px;
-	margin-left: 23px;
+	margin-left: 25px;
 	background-color: transparent;
 	background-image: url('../img/icon-left.svg');
 	background-repeat: no-repeat;
@@ -873,7 +873,7 @@ img {
 	border: none;
 	width: 21px;
 	height: 39px;
-	margin-right: 23px;
+	margin-right: 21px;
 	background-color: transparent;
 	background-image: url('../img/icon-right.svg');
 	background-repeat: no-repeat;
@@ -894,8 +894,8 @@ img {
 	padding: 0;
 	width: 10px;
 	height: 10px;
-	background-color: transparent;
-	border: 2px solid #ffffff;
+	background-color: var(--basic-white);
+	border: 2px solid var(--basic-white);
 	border-radius: 50%;
 	cursor: pointer;
 }
@@ -1305,39 +1305,78 @@ img {
 	padding: 0;
 }
 
-.filter-brands li,
-.filter-battery li {
+.filter-brands li {
 	list-style: none;
-	margin-top: 12px;
+	margin-top: 20px;
+	position: relative;
 }
 
 .filter-brands li:first-child {
 	margin-top: 17px;
 }
 
-.filter-brands li::before {
+.filter-brands label,
+.filter-battery label {
+	position: relative;
+	left: 35px;
+	display: block;
+	cursor: pointer;
+	user-select: none;
+}
+
+.brands-input-checkbox + label::before {
 	content: "";
 	width: 23px;
 	height: 23px;
-	position: relative;
-	top: 6px;
-	left: 0;
-	display: inline-block;
+	position: absolute;
+	top: -2px;
+	left: -35px;
 	margin-right: 12px;
 	background-image: url('../img/checkbox-off.svg');
 	background-repeat: no-repeat;
 }
 
-.filter-battery li::before {
+.brands-input-checkbox:checked + label::before {
+	content: "";
+	width: 27px;
+	height: 23px;
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	margin-right: 12px;
+	background-image: url('../img/checkbox-on.svg');
+	background-repeat: no-repeat;
+}
+
+.filter-battery li {
+	list-style: none;
+	margin-top: 23px;
+	position: relative;
+}
+
+.brands-input-radio + label::before {
 	content: "";
 	width: 25px;
 	height: 25px;
-	position: relative;
-	top: 6px;
-	left: 0;
+	position: absolute;
+	top: -2px;
+	left: -35px;
 	display: inline-block;
 	margin-right: 12px;
 	background-image: url('../img/radio-off.svg');
+	background-repeat: no-repeat;
+}
+
+.brands-input-radio:checked + label::before {
+	content: "";
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: -2px;
+	left: -35px;
+	display: inline-block;
+	margin-right: 12px;
+	background-image: url('../img/radio-on.svg');
 	background-repeat: no-repeat;
 }
 
@@ -1352,7 +1391,7 @@ img {
 	box-sizing: border-box;
 	padding: 10px 78px;
 	cursor: pointer;
-	margin-top: 35px;
+	margin-top: 42px;
 }
 
 .products-sort {

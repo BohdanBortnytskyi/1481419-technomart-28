@@ -106,19 +106,40 @@
 							<fieldset class="filter-brands">
 								<legend>Производители:</legend>
 								<ul>
-									<li>Bosch</li>
-									<li>Интерскол</li>
-									<li>Makita</li>
-									<li>Dewalt</li>
-									<li>Hitachi</li>
+									<li>
+										<input class="visually-hidden brands-input-checkbox" type="checkbox" name="bosch" id="brands-bosch" checked>
+            							<label for="brands-bosch">Bosch</label>
+									</li>
+									<li>
+										<input class="visually-hidden brands-input-checkbox" type="checkbox" name="interskol" id="brands-interskol">
+            							<label for="brands-interskol">Интерскол</label>
+									</li>
+									<li>
+										<input class="visually-hidden brands-input-checkbox" type="checkbox" name="makita" id="brands-makita" checked>
+            							<label for="brands-makita">Makita</label>
+									</li>
+									<li>
+										<input class="visually-hidden brands-input-checkbox" type="checkbox" name="dewalt" id="brands-dewalt">
+            							<label for="brands-dewalt">Dewalt</label>
+									</li>
+									<li>
+										<input class="visually-hidden brands-input-checkbox" type="checkbox" name="hitachi" id="brands-hitachi">
+            							<label for="brands-hitachi">Hitachi</label>
+									</li>
 								</ul>
 							</fieldset>
 							<div class="filter-separator"></div>
 							<fieldset class="filter-battery">
 								<legend>Питание:</legend>
 								<ul>
-									<li>Аккумуляторные</li>
-									<li>Сетевые</li>
+									<li>
+										<input class="visually-hidden brands-input-radio" type="radio" name="battery-type" id="battery-rechargeable" value="rechargeable" checked>
+            							<label for="battery-rechargeable">Аккумуляторные</label>
+									</li>
+									<li>
+										<input class="visually-hidden brands-input-radio" type="radio" name="battery-type" id="battery-supply" value="supply">
+            							<label for="battery-supply">Сетевые</label>
+									</li>
 								</ul>
 							</fieldset>
 							<button type="submit">Показать</button>
