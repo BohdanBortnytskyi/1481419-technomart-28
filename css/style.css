@@ -80,6 +80,8 @@ body {
 	font-family: PT Sans, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
+	font-style: normal;
+	font-weight: normal;
 	color: var(--basic-black);
 	background-color: var(--basic-white);
 	min-height: 100%;
@@ -223,6 +225,7 @@ img {
 	color: var(--basic-white);
 	margin: 0;
 	padding: 0;
+	margin-left: -8px;
 	cursor: pointer;
 }
 
@@ -230,7 +233,7 @@ img {
 	content: "";
 	position: absolute;
 	top: 2px;
-	left: 20px;
+	left: 17px;
 	width: 17px;
 	height: 17px;
 	padding-left: 20px;
@@ -286,6 +289,7 @@ img {
 .bookmarks {
 	position: relative;
 	padding-left: 15px;
+	left: 12px;
 	min-width: 150px;
 }
 
@@ -296,7 +300,6 @@ img {
 	left: 25px;
 	width: 14px;
 	height: 15px;
-	padding-left: 20px;
 	background-image: url('../img/icon-bookmark.svg');
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -306,17 +309,18 @@ img {
 .cart {
 	position: relative;
 	padding-left: 15px;
-	min-width: 136px;
+	left: 5px;
+	min-width: 123px;
+	margin-left: 10px;
 }
 
 .cart a::before {
 	content: "";
 	position: absolute;
 	top: 12px;
-	left: 20px;
+	left: 12px;
 	width: 15px;
 	height: 15px;
-	padding-left: 20px;
 	background-image: url('../img/icon-cart.svg');
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -335,7 +339,7 @@ img {
 
 .header-top-nav .order {
 	background-color: var(--basic-green);
-	min-width: 150px;
+	min-width: 154px;
 }
 
 .header-top-nav .order:hover {
@@ -364,12 +368,17 @@ img {
 	font-size: 16px;
 	line-height: 23px;
 	color: var(--basic-red);
+	margin: 0;
+	padding: 0;
 	margin-left: 30px;
+	margin-top: 3px;
 }
 
 .header-contacts {
 	width: 270px;
 	position: relative;
+	top: 3px;
+	left: 20px;
 }
 
 .header-phone {
@@ -577,13 +586,22 @@ img {
 .main-menu {
 	background-color: var(--basic-greymedium);
 	box-shadow: inset 0px -5px 0px var(--basic-grey);
-	list-style: none;
-	min-height: 60px;
 	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+	justify-content: center;
 	margin-top: 42px;
 	margin-bottom: 60px;
+}
+
+.main-menu ul {
+	width: 888px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	min-height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .main-menu a {
@@ -631,18 +649,21 @@ img {
 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
-	margin-top: 70px;
+	margin-top: 93px;
 }
 
 .main-about p:first-of-type {
-	margin-bottom: 35px;
+	margin-bottom: 24px;
 }
 
 .delivery-partners {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	margin-top: 3px;
 	margin-bottom: 20px;
 }
 
@@ -680,13 +701,15 @@ img {
 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
 	margin-top: 70px;
 }
 
 .main-contacts .map {
 	margin-top: 32px;
-	margin-bottom: 25px;
+	margin-bottom: 16px;
 }
 
 .main-contacts .button-contact {
@@ -826,6 +849,7 @@ img {
 
 .slider-single h3 {
 	font-size: 36px;
+	text-transform: uppercase;
 	line-height: 36px;
 	margin: 0;
 	margin-top: 23px;
@@ -843,7 +867,7 @@ img {
 	padding-left: 46px;
 	padding-right: 46px;
 	position: absolute;
-	bottom: 27px;
+	bottom: 35px;
     left: 24px;
 }
 
@@ -942,6 +966,8 @@ img {
 .main-products h2,
 .main-brands h2 {
 	font-family: Cuprum, sans-serif;
+	font-style: normal;
+	font-weight: normal;
 	color: var(--basic-greymedium);
 	font-size: 30px;
 	line-height: 30px;
@@ -961,7 +987,7 @@ img {
 }
 
 .main-brands {
-	margin-top: 60px;
+	margin-top: 48px;
 }
 
 .products-all, .brands-all {
@@ -983,7 +1009,7 @@ img {
 .brands-all {
 	padding-left: 39px;
 	padding-right: 38px;
-	margin-right: 14px;
+	margin-right: 20px;
 }
 
 .brands-list {
@@ -1018,18 +1044,24 @@ img {
 
 /* Services Section */
 
-.main-servises-wrapper {
+.main-services-wrapper {
 	background-color: var(--basic-bg);
 	width: 100%;
 	height: 522px;
+}
+
+.main-services {
+	height: 100%;
 }
 
 .main-services h2 {
 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
-	padding-top: 64px;
+	padding-top: 86px;
 }
 
 .main-services-content {
@@ -1053,6 +1085,7 @@ img {
 	height: 100%;
 	border: none;
 	font-family: Cuprum, sans-serif;
+	font-style: normal;
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 30px;
@@ -1061,6 +1094,7 @@ img {
 	background-color: var(--basic-greymedium);
 	box-shadow: 0px 1px 0px var(--basic-grey), inset 0px 1px 0px var(--shadow-services-tabs);
 	cursor: pointer;
+	padding-left: 22px;
 }
 
 .services-tabs .active {
@@ -1074,7 +1108,27 @@ img {
 }
 
 .services-article {
+	width: 100%;
+	height: 237px;
 	margin-left: 80px;
+}
+
+.services-credit {
+	background-image: url('../img/bg-credit.png');
+	background-repeat: no-repeat;
+	background-position: 155px 0;
+}
+
+.services-warranty {
+	background-image: url('../img/bg-warranty.png');
+	background-repeat: no-repeat;
+	background-position: 232px 0;
+}
+
+.services-delivery {
+	background-image: url('../img/bg-delivery.png');
+	background-repeat: no-repeat;
+	background-position: 152px 0;
 }
 
 .services-article h3 {
@@ -1082,14 +1136,17 @@ img {
  	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
 }
 
 .services-article p {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 28px;
+	margin-bottom: 25px;
+	width: 320px;
 }
 
 .services-article a {
@@ -1158,6 +1215,8 @@ img {
 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
 	color: var(--basic-greymedium);
 	background-color: var(--header-section-bg-catalog);
@@ -1293,7 +1352,6 @@ img {
 	font-weight: bold;
 	text-transform: uppercase;
 	color: var(--basic-black);
-	margin-bottom: 0;
 }
 
 .filter-brands,
@@ -1579,10 +1637,11 @@ img {
 
 .product-image {
 	width: 100%;
-	min-height: 180px;
+	min-height: 165px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 12px;
 }
 
 .product-image img {
@@ -1591,6 +1650,7 @@ img {
 
 .product-card a {
 	text-align: center;
+	width: 157px;
 }
 
 .product-card h3 {
@@ -1620,7 +1680,8 @@ img {
 	background-image: url('../img/red-button.svg');
 	background-repeat: no-repeat;
 	padding: 10px 44px 10px 32px;
-	margin-top: 13px;
+	margin-top: 15px;
+	margin-left: 15px;
 }
 
 .product-options {
@@ -1650,7 +1711,6 @@ img {
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
-	margin-top: 10px;
 }
 
 .button-buy {
@@ -1699,6 +1759,7 @@ img {
 	display: flex;
 	margin: 0;
 	padding: 0;
+	margin-top: 23px;
 }
 
 .pagination li {
@@ -1718,6 +1779,10 @@ img {
 	align-items: center;
 	margin-right: 10px;
 	padding: 10px;
+}
+
+.pagination li:last-child {
+	padding: 10px 31px 10px 32px;
 }
 
 .pagination li:not(.active):hover {
@@ -1746,7 +1811,7 @@ img {
 
 .few-words-wrapper {
 	width: 100%;
-	height: 260px;
+	height: 276px;
 	background-color: var(--basic-bg);
 }
 
@@ -1754,8 +1819,10 @@ img {
 	font-family: Cuprum, sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	font-style: normal;
+	font-weight: normal;
 	text-transform: uppercase;
-	padding-top: 64px;
+	padding-top: 80px;
 }
 
 /* Footer */
@@ -1792,7 +1859,10 @@ footer {
 }
 
 .footer-address {
+	margin: 0;
+	padding: 0;
 	color: var(--footer-address);
+	margin-top: 22px;
 }
 
 .footer-nav {
@@ -1865,7 +1935,7 @@ footer {
 	width: 100%;
 	height: 107px;
 	display: flex;
-	justify-content: space-between;
+	/*justify-content: space-between;*/
 	align-items: center;
 }
 
@@ -1875,6 +1945,7 @@ footer {
 	margin: 0;
 	padding: 0;
 	color: var(--basic-white);
+	margin-right: 160px;
 }
 
 .footer-social {
@@ -1886,6 +1957,7 @@ footer {
 	align-items: center;
 	flex-wrap: wrap;
 	max-width: 270px;
+	margin-right: 116px;
 }
 
 .footer-social a {
@@ -1896,15 +1968,20 @@ footer {
 	align-items: center;
 	background-color: var(--footer-social-bg);
 	border-radius: 50%;
-	margin-right: 5px;
+	margin-right: 2px;
 }
 
 .footer-social a:hover {
 	background-color: var(--basic-red);
 }
 
-.footer-info {
+.footer-feedback {
 	width: 140px;
+}
+
+.footer-developed {
+	width: 100px;
+	margin-left: 50px;
 }
 
 .footer-info a {
