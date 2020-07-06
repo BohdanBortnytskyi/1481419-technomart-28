@@ -21,7 +21,8 @@
 				  		<div class="header-top-menu">
 				  			<div class="header-search">
 						      	<button type="button">Поиск:</button>
-						      	<input type="text" name="search-text">
+						      	<input type="text" id="header-search" name="search-text">
+						      	<label for="header-search" class="visually-hidden">Поиск</label>
 						    </div>
 					      	<ul class="header-top-nav">
 					      		<li class=bookmarks>
@@ -94,13 +95,15 @@
 									<div class="scale">
 										<div class="bar" style="width: 60%; margin-left: 20%;"></div>
 									</div>
-									<div class="toggle toggle-min" tabindex="0" style="left: 20%;"></div>
-									<div class="toggle toggle-max" tabindex="0" style="left: 70%;"></div>
+									<div class="toggle toggle-min" tabindex="0" style="left: 20%;" aria-label="Регулятор минимальной цены"></div>
+									<div class="toggle toggle-max" tabindex="0" style="left: 70%;" aria-label="Регулятор максимальной цены"></div>
 								</div>
 								<div class="price-inputs">
-									<input type="number" name="min-price" value="0">
+									<input type="number" id="min-price" name="min-price" value="0">
+									<label for="min-price" class="visually-hidden">Минимальное значение цены</label>
 									<span>—</span>
-									<input type="number" name="max-price" value="30000">
+									<input type="number" id="max-price" name="max-price" value="30000">
+									<label for="max-price" class="visually-hidden">Максимальное значение цены</label>
 								</div>
 							</fieldset>
 							<fieldset class="filter-brands">
@@ -163,7 +166,7 @@
 						</div>
 					</header>
 					<div class="products-block">
-						<ul class="products-list">
+						<ul class="products-list three-items-row">
 							<li class="product-card">
 								<div class="product-options">
 									<button class="button-buy" type="button">Купить</button>
@@ -399,5 +402,7 @@
 				<button type="button" class="button-close"></button>
 			</div>
 		</div>
+		<!-- Собственные скрипты -->
+		<script src="js/script.js"></script>
 	</body>
 </html>

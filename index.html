@@ -21,7 +21,8 @@
 				  		<div class="header-top-menu">
 				  			<div class="header-search">
 						      	<button type="button">Поиск:</button>
-						      	<input type="text" name="search-text">
+						      	<input type="text" id="header-search" name="search-text">
+						      	<label for="header-search" class="visually-hidden">Поиск</label>
 						    </div>
 					      	<ul class="header-top-nav">
 					      		<li class="bookmarks">
@@ -141,7 +142,7 @@
 						<h2>Популярные товары:</h2>
 						<a class="products-all button-red" href="#">Все популярные товары</a>
 					</header>
-					<ul class="products-list">
+					<ul class="products-list four-items-row">
 						<li class="product-card">
 							<div class="product-options">
 								<button class="button-buy" type="button">Купить</button>
@@ -415,5 +416,7 @@
 				<button type="button" class="button-close"></button>
 			</div>
 		</div>
+		<!-- Собственные скрипты -->
+		<script src="js/script.js"></script>
 	</body>
 </html>
