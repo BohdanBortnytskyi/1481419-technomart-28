@@ -99,12 +99,6 @@ if(tabDelivery && tabWarranty && tabCredit) {
 	});
 }
 
-// for(var i = 0; i < tabs.length; i++) {
-// 	tabs[i].addEventListener("click", function () {
-// 		tabs[i].classList.toggle("services-article-current");
-// 	});
-// }
-
 
 // Модальное окно с формой обратной связи
 
