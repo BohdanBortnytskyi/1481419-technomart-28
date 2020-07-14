@@ -134,7 +134,8 @@ img {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 38px;
+	min-height: 18px;
+	padding: 10px;
 	border: none;
 }
 
@@ -735,6 +736,7 @@ img {
 }
 
 .main-contacts .button-contact {
+	max-width: 180px;
 	padding-left: 60px;
 	padding-right: 60px;
 }
@@ -1054,12 +1056,14 @@ img {
 }
 
 .products-all {
+	width: 144px;
 	padding-left: 24px;
 	padding-right: 24px;
 	margin-right: 14px;
 }
 
 .brands-all {
+	width: 115px;
 	padding-left: 39px;
 	padding-right: 38px;
 	margin-right: 20px;
@@ -1134,12 +1138,11 @@ img {
 
 .services-tabs li {
 	width: 240px;
-	height: 61px;
 }
 
 .services-tabs button {
 	width: 100%;
-	height: 100%;
+	min-height: 61px;
 	border: none;
 	font-family: Cuprum, Arial, sans-serif;
 	font-style: normal;
@@ -1203,6 +1206,7 @@ img {
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
+	width: 300px;
 }
 
 .services-article p {
@@ -1588,6 +1592,7 @@ img {
 	margin: 0;
 	padding: 0;
 	padding-left: 18px;
+	width: 150px;
 }
 
 .sort-options {
@@ -1599,6 +1604,10 @@ img {
 	justify-content: flex-end;
 }
 
+.sort-options li {
+	max-width: 180px;
+}
+
 .sort-options a {
 	mix-blend-mode: normal;
 	color: var(--basic-blackthird);
@@ -1607,6 +1616,7 @@ img {
 	border-bottom-color: var(--basic-red);
 	text-transform: uppercase;
 	margin-left: 65px;
+	float: right;
 }
 
 .sort-options .active {
@@ -1753,7 +1763,7 @@ img {
 
 .product-card a {
 	text-align: center;
-	width: 157px;
+	width: 160px;
 }
 
 .product-card h3 {
@@ -1768,6 +1778,7 @@ img {
 .price-wrapper {
 	width: 100%;
 	min-height: 70px;
+	margin-bottom: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -1782,6 +1793,8 @@ img {
 	        text-decoration-line: line-through;
 	text-transform: uppercase;
 	color: var(--basic-greymediumlow);
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .price {
@@ -2070,9 +2083,8 @@ footer {
 	line-height: 18px;
 	color: var(--basic-white);
 	width: 100%;
-	height: 107px;
+	min-height: 107px;
 	display: flex;
-	/*justify-content: space-between;*/
 	align-items: center;
 }
 
